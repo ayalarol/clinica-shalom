@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clínica Veterinaria Shalom</title>
+    <link rel="stylesheet" href="../build/assets/app-CHmf9QqC.css" />
+    <script type="module" src="../build/assets/app-DtCVKgHt.js"></script>
+</head>
+<body class="font-sans antialiased">
+    <div class="min-h-screen bg-gray-100">
+        <nav class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div x-data="{ open: false }" class="flex justify-between items-center h-16">
+            <div class="flex-shrink-0 flex items-center">
+                <a href="../index.html" class="flex items-center gap-2">
+                    <img src="../logo.png" alt="Logo Clínica Shalom" class="h-30 w-50 object-contain" style="cursor:pointer" onclick="window.location.href='../index.html'">
+                </a>
+            </div>
+            <!-- Menú desktop -->
+            <div class="hidden space-x-8 md:flex">
+                <a href="../index.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">Inicio</a>
+                <a href="../nosotros/index.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">Nosotros</a>
+                <a href="index.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">Servicios</a>
+                <a href="../urgencias/index.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">Urgencias 24h</a>
+                <a href="../contacto/index.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">Contacto</a>
+            </div>
+            <!-- Botón hamburguesa -->
+            <div class="md:hidden flex items-center fixed top-4 right-1/2 translate-x-1/2 max-w-7xl px-4 w-full z-50" style="justify-content: flex-end; pointer-events: none;">
+                <div style="pointer-events: auto;">
+                <button @click="open = !open" class="text-gray-700 focus:outline-none bg-white rounded-full shadow-md p-2 border border-gray-200">
+                    <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                </div>
+            </div>
+            <!-- Menú móvil -->
+            <div x-show="open" @click.away="open = false" class="fixed top-16 left-0 w-full bg-white shadow-md flex flex-col items-center space-y-4 py-4 md:hidden z-50">
+                <a href="../index.html" class="block text-gray-700 font-semibold">Inicio</a>
+                <a href="../nosotros/index.html" class="block text-gray-700 font-semibold">Nosotros</a>
+                <a href="index.html" class="block text-gray-700 font-semibold">Servicios</a>
+                <a href="../urgencias/index.html" class="block text-gray-700 font-semibold">Urgencias 24h</a>
+                <a href="../contacto/index.html" class="block text-gray-700 font-semibold">Contacto</a>
+            </div>
+        </div>
+    </div>
+</nav>
+        <main>
+            <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold text-center text-text-main mb-12">Nuestros Servicios</h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+    <div class="mb-4 flex justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                        </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-text-main mb-3">Clínica Médica</h3>
+    <p class="text-gray-600">Diagnóstico, tratamiento y prevención de enfermedades.</p>
+</div>                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+    <div class="mb-4 flex justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002 12c0 2.757 1.125 5.224 2.938 7.078A11.999 11.999 0 0012 22c2.912 0 5.618-1.125 7.618-3.04A12.001 12.001 0 0022 12c0-2.757-1.125-5.224-2.938-7.078z" />
+                        </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-text-main mb-3">Vacunaciones</h3>
+    <p class="text-gray-600">Programas de vacunación personalizados para cada mascota.</p>
+</div>                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+    <div class="mb-4 flex justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m7-7v14" />
+                        </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-text-main mb-3">Farmacia</h3>
+    <p class="text-gray-600">Disponemos de una farmacia veterinaria completa.</p>
+</div>                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+    <div class="mb-4 flex justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7a4 4 0 118 0v2a4 4 0 11-8 0V7z" />
+                        </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-text-main mb-3">Estética Canina</h3>
+    <p class="text-gray-600">Servicios de peluquería y baño para mantener a tu mascota impecable.</p>
+</div>                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+    <div class="mb-4 flex justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M3 12h18M3 17h18" />
+                        </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-text-main mb-3">Internaciones</h3>
+    <p class="text-gray-600">Cuidado y monitoreo constante para mascotas que requieren hospitalización.</p>
+</div>                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+    <div class="mb-4 flex justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="8" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-text-main mb-3">Ecografía y Ecocardiografía</h3>
+    <p class="text-gray-600">Diagnóstico por imagen avanzado para una evaluación precisa.</p>
+</div>                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+    <div class="mb-4 flex justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <rect x="4" y="4" width="16" height="16" rx="2" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 8h8M8 16h8M8 12h8" />
+                        </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-text-main mb-3">Radiología</h3>
+    <p class="text-gray-600">Estudios radiográficos para detectar problemas óseos y de tejidos blandos.</p>
+</div>                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+    <div class="mb-4 flex justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 17l9-9m0 0l-9 9" />
+                        </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-text-main mb-3">Traumatología y Ortopedia</h3>
+    <p class="text-gray-600">Atención especializada en lesiones y enfermedades del sistema musculoesquelético.</p>
+</div>                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+    <div class="mb-4 flex justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m4 0h-1v4h-1" />
+                        </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-text-main mb-3">Test de Serología Rápida</h3>
+    <p class="text-gray-600">Resultados rápidos para diagnósticos urgentes.</p>
+</div>                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+    <div class="mb-4 flex justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 0v20" />
+                        </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-text-main mb-3">Limpieza Dental</h3>
+    <p class="text-gray-600">Cuidado dental para prevenir enfermedades periodontales.</p>
+</div>                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+    <div class="mb-4 flex justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                        </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-text-main mb-3">Cirugías en General</h3>
+    <p class="text-gray-600">Amplia gama de procedimientos quirúrgicos con tecnología moderna.</p>
+</div>                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+    <div class="mb-4 flex justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-text-main mb-3">Pet Shop</h3>
+    <p class="text-gray-600">Encuentra alimentos, accesorios y productos de calidad para tu mascota.</p>
+</div>            </div>
+        </div>
+    </div>
+        </main>
+
+        <footer class="bg-text-main text-white py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-gray-800">&copy; 2025 Clínica Veterinaria Shalom. Todos los derechos reservados.</p>
+        <div class="mt-4">
+            <a href="../privacidad/index.html" class="text-gray-800 hover:text-primary mx-2">Política de Privacidad</a>
+            <a href="../terminos/index.html" class="text-gray-800 hover:text-primary mx-2">Términos y Condiciones</a>
+            <!-- Corrección de enlaces de botones principales -->
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Corrige enlaces absolutos file:///servicios, file:///urgencias, file:/// a rutas relativas
+                document.querySelectorAll('a').forEach(function(a) {
+                    if (a.getAttribute('href') === '/servicios') a.setAttribute('href', 'index.html');
+                    if (a.getAttribute('href') === '/urgencias') a.setAttribute('href', '../urgencias/index.html');
+                    if (a.getAttribute('href') === '/') a.setAttribute('href', '../index.html');
+                });
+                // Botón "Ver servicios" debe ir a la página de servicios (actual)
+                document.querySelectorAll('a, button').forEach(function(el) {
+                    if (el.textContent && el.textContent.match(/ver servicios/i)) {
+                        el.setAttribute('href', 'index.html');
+                    }
+                });
+                // Botón "Contacto de urgencias" debe ir a urgencias
+                document.querySelectorAll('a, button').forEach(function(el) {
+                    if (el.textContent && el.textContent.match(/contacto.*urgencias/i)) {
+                        el.setAttribute('href', '../urgencias/index.html');
+                    }
+                });
+                // Logo del header siempre a inicio
+                var logo = document.querySelector('nav .flex-shrink-0 a');
+                if (logo) logo.setAttribute('href', '../index.html');
+            });
+            </script>
+        </div>
+    </div>
+</footer>    </div>
+</body>
+</html>
