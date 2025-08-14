@@ -10,66 +10,106 @@
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100">
         <nav class="bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div x-data="{ open: false }" class="flex justify-between items-center h-16">
-            <div class="flex-shrink-0 flex items-center">
-                <a href="../index.html" class="flex items-center gap-2">
-                    <img src="../logo.png" alt="Logo Clínica Shalom" class="h-30 w-50 object-contain">
-                </a>
-            </div>
-            <!-- Menú desktop -->
-            <div class="hidden space-x-8 md:flex">
-                <a href="../index.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">Inicio</a>
-                <a href="../nosotros/index.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">Nosotros</a>
-                <a href="../servicios/index.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">Servicios</a>
-                <a href="index.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">Urgencias 24h</a>
-                <a href="../contacto/index.html" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">Contacto</a>
-            </div>
-            <!-- Botón hamburguesa -->
-            <div class="md:hidden flex items-center fixed top-4 right-1/2 translate-x-1/2 max-w-7xl px-4 w-full z-50" style="justify-content: flex-end; pointer-events: none;">
-                <div style="pointer-events: auto;">
-                <button @click="open = !open" class="text-gray-700 focus:outline-none bg-white rounded-full shadow-md p-2 border border-gray-200">
-                    <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                    <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-                </div>
-            </div>
-            <!-- Menú móvil -->
-            <div x-show="open" @click.away="open = false"
-                class="md:hidden fixed inset-0 z-[10050] flex flex-col transition-all">
-                <!-- Overlay oscuro detrás del menú -->
-                <div class="absolute inset-0 bg-black bg-opacity-60 z-[10040]"></div>
-                <!-- Menú visible solo en la mitad superior -->
-                <div class="absolute left-0 top-0 w-full h-1/2 bg-gray-900/95 shadow-xl flex flex-col z-[10050] rounded-b-3xl">
-                    <div class="flex items-center justify-end p-4">
-                        <button @click="open = false"
-                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800 focus:outline-none focus:bg-gray-800 focus:text-white transition">
-                            <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            <div x-data="{ open: false }" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16 relative">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 flex items-center">
+                            <a href="../index.html" class="flex items-center gap-2">
+                                <img src="../logo.png" alt="Logo Clínica Shalom" class="h-30 w-50 object-contain">
+                            </a>
+                        </div>
+                        <!-- Iconos de redes sociales -->
+                        <div class="hidden md:flex items-center space-x-4 ml-6">
+                            <a href="https://www.facebook.com/clinicaveterinaria.shalom/" target="_blank" class="text-gray-500 hover:text-gray-700">
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                            <a href= "https://wa.me/595986269873" target="_blank" class="text-gray-500 hover:text-gray-700">
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M19.004 4.998a9.85 9.85 0 00-13.93 0 9.85 9.85 0 000 13.93 9.85 9.85 0 0013.93 0c3.855-3.855 3.855-10.075 0-13.93zm-1.334 12.596a8.303 8.303 0 01-11.742 0 8.303 8.303 0 010-11.742 8.303 8.303 0 0111.742 0 8.303 8.303 0 010 11.742zm-2.934-3.63a.436.436 0 00-.327-.155c-.053 0-.106.008-.158.01l-.317.05c-.105.018-.21.035-.315.035-.21 0-.412-.052-.596-.148-.57-.28-1.114-.663-1.58-1.113-.56-.547-.96-1.14-1.18-1.755-.18-.505-.18-1.01.07-1.448l.237-.412c.166-.28.166-.63 0-.91-.165-.28-.44-.447-.737-.447h-.42c-.28 0-.526.14-.663.37l-.263.465c-.237.412-.37.86-.37 1.336 0 .685.15 1.337.447 1.965.506 1.087 1.28 2.017 2.245 2.728.895.65 1.89 1.072 2.915 1.22.21.036.412.053.614.053.526 0 1.018-.158 1.42-.465l.386-.28c.28-.21.412-.526.35-.86l-.12-.633c-.08-.337-.35-.578-.685-.578z"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/clinicavet.shalom/" target="_blank" class="text-gray-500 hover:text-gray-700">
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm6.406-11.845a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z" clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Menú desktop -->
+                    <div class="hidden space-x-8 md:flex">
+                        <a href="../index.html"
+                            class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">Inicio</a>
+                        <a href="../nosotros/index.html"
+                            class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">Nosotros</a>
+                        <a href="../servicios/index.html"
+                            class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">Servicios</a>
+                        <a href="../urgencias/index.html"
+                            class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">Urgencias
+                            24h</a>
+                        <a href="../contacto/index.html"
+                            class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">Contacto</a>
+                    </div>
+                    <!-- Botón hamburguesa -->
+                    <div class="md:hidden">
+                        <button @click="open = !open"
+                            class=" right-4 -translate-y-1/2 z-50 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition">
+                            <svg x-show="!open" class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                             </svg>
                         </button>
                     </div>
-                    <div class="px-2 pt-2 pb-3 flex-1 flex flex-col items-center justify-center text-center gap-3">
-                        <a href="../index.html"
-                            class="block px-6 py-3 rounded-md text-lg font-semibold text-white hover:text-yellow-300 hover:bg-gray-800 w-full transition" @click="open = false">Inicio</a>
-                        <a href="../nosotros/index.html"
-                            class="block px-6 py-3 rounded-md text-lg font-semibold text-white hover:text-yellow-300 hover:bg-gray-800 w-full transition" @click="open = false">Nosotros</a>
-                        <a href="../servicios/index.html"
-                            class="block px-6 py-3 rounded-md text-lg font-semibold text-white hover:text-yellow-300 hover:bg-gray-800 w-full transition" @click="open = false">Servicios</a>
-                        <a href="index.html"
-                            class="block px-6 py-3 rounded-md text-lg font-semibold text-white hover:text-yellow-300 hover:bg-gray-800 w-full transition" @click="open = false">Urgencias 24h</a>
-                        <a href="../contacto/index.html"
-                            class="block px-6 py-3 rounded-md text-lg font-semibold text-white hover:text-yellow-300 hover:bg-gray-800 w-full transition" @click="open = false">Contacto</a>
+                </div>
+                <!-- Menú móvil -->
+                <div x-show="open" @click.away="open = false"
+                    class="md:hidden absolute left-0 top-16 w-full z-[10050] flex flex-col transition-all">
+                    <!-- Overlay oscuro detrás del menú -->
+                    <div class="absolute inset-0 bg-black bg-opacity-60 z-[10040]"></div>
+                    <!-- Menú visible solo en la mitad superior -->
+                    <div class="relative w-full h-1/2 bg-gray-900/95 shadow-xl flex flex-col z-[10050] rounded-b-3xl">
+                        <div class="flex items-center justify-end p-4">
+                            <button @click="open = false"
+                                class="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800 focus:outline-none focus:bg-gray-800 focus:text-white transition">
+                                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="px-2 pt-2 pb-3 flex-1 flex flex-col items-center justify-center text-center gap-3">
+                            <a href="../index.html"
+                                class="block px-6 py-3 rounded-md text-lg font-semibold text-white hover:text-yellow-300 hover:bg-gray-800 w-full transition" @click="open = false">Inicio</a>
+                            <a href="../nosotros/index.html"
+                                class="block px-6 py-3 rounded-md text-lg font-semibold text-white hover:text-yellow-300 hover:bg-gray-800 w-full transition" @click="open = false">Nosotros</a>
+                            <a href="../servicios/index.html"
+                                class="block px-6 py-3 rounded-md text-lg font-semibold text-white hover:text-yellow-300 hover:bg-gray-800 w-full transition" @click="open = false">Servicios</a>
+                            <a href="../urgencias/index.html"
+                                class="block px-6 py-3 rounded-md text-lg font-semibold text-white hover:text-yellow-300 hover:bg-gray-800 w-full transition" @click="open = false">Urgencias 24h</a>
+                            <a href="../contacto/index.html"
+                                class="block px-6 py-3 rounded-md text-lg font-semibold text-white hover:text-yellow-300 hover:bg-gray-800 w-full transition" @click="open = false">Contacto</a>
+                            <!-- Iconos de redes sociales para móvil -->
+                            <div class="flex items-center space-x-6 mt-4">
+                                <a href="https://www.facebook.com/clinicaveterinaria.shalom/" class="text-white hover:text-yellow-300">
+                                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-white hover:text-yellow-300">
+                                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M19.004 4.998a9.85 9.85 0 00-13.93 0 9.85 9.85 0 000 13.93 9.85 9.85 0 0013.93 0c3.855-3.855 3.855-10.075 0-13.93zm-1.334 12.596a8.303 8.303 0 01-11.742 0 8.303 8.303 0 010-11.742 8.303 8.303 0 0111.742 0 8.303 8.303 0 010 11.742zm-2.934-3.63a.436.436 0 00-.327-.155c-.053 0-.106.008-.158.01l-.317.05c-.105.018-.21.035-.315.035-.21 0-.412-.052-.596-.148-.57-.28-1.114-.663-1.58-1.113-.56-.547-.96-1.14-1.18-1.755-.18-.505-.18-1.01.07-1.448l.237-.412c.166-.28.166-.63 0-.91-.165-.28-.44-.447-.737-.447h-.42c-.28 0-.526.14-.663.37l-.263.465c-.237.412-.37.86-.37 1.336 0 .685.15 1.337.447 1.965.506 1.087 1.28 2.017 2.245 2.728.895.65 1.89 1.072 2.915 1.22.21.036.412.053.614.053.526 0 1.018-.158 1.42-.465l.386-.28c.28-.21.412-.526.35-.86l-.12-.633c-.08-.337-.35-.578-.685-.578z"></path>
+                                    </svg>
+                                </a>
+                                <a href="https://www.instagram.com/clinicavet.shalom/" class="text-white hover:text-yellow-300">
+                                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm6.406-11.845a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</nav>
+        </nav>
         <main>
             <div class="py-12 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
